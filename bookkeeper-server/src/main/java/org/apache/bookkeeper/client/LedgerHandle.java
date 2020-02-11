@@ -1303,7 +1303,7 @@ public class LedgerHandle implements WriteHandle {
             // synchronized on this to ensure that
             // the ledger isn't closed between checking and
             // updating lastAddPushed
-            if (isHandleWritable()) {
+            if (isHandleWritable()) {c
                 long entryId = ++lastAddPushed;
                 long currentLedgerLength = addToLength(op.payload.readableBytes());
                 op.setEntryId(entryId);
